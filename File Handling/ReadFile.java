@@ -8,7 +8,7 @@ public class ReadFile {
 	public static void main(String[] args) throws IOException {
 		char[] data = new char[100];
 		try {
-			FileReader input = new FileReader("data.txt");
+			FileReader input = new FileReader("Jaswanth.txt");
 			input.read(data);
 			System.out.println("data is available from a file");
 			System.out.println(data);
