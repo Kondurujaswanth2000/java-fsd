@@ -9,7 +9,7 @@ public class WriteFile {
 		String data ="Jaswanth ,Nellore ,Andhra Pradesh";
 		
 		try {
-			FileWriter output = new FileWriter("data.txt");
+			FileWriter output = new FileWriter("Jaswanth.txt");
 			output.write(data);
 			System.out.println("Data is writted successfully");
 			output.close();
