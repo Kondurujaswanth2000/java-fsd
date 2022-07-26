@@ -7,7 +7,7 @@ public class AppendFile {
 	public static void main(String[] args) {
 		String file ="data appended";
 		try {
-			FileWriter output = new FileWriter("data.txt",true);
+			FileWriter output = new FileWriter("Jaswanth.txt",true);
 			output.write(file);
 			System.out.println("data appended successfully..");
 			output.close();
