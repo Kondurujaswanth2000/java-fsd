@@ -1,0 +1,29 @@
+<app-adminh></app-adminh>
+<h1 class="heading">Policy holders list</h1>
+
+<table id="customers">
+ <thead>
+  <tr>
+    <th>Username</th>
+    <th>PolicyId</th>
+    <th>Date</th>
+     <th>Status</th>
+
+
+  </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let obj of user">
+        <td>{{obj.userName}}</td>
+         <td>{{obj.policyId}}</td>
+         <td>{{obj.date | date : 'shortDate'}}</td>
+         <td>{{obj.status}}</td>
+    </tr>
+    <tr *ngFor="let obj1 of pol">
+        <td>{{obj1.userName}}</td>
+         <td>{{obj1.policyId}}</td>
+         <td>{{obj1.date | date : 'shortDate'}}</td>
+         <td>{{obj1.status}}</td>
+    </tr>
+</tbody>
+</table>

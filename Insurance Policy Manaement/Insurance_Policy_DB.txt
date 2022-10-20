@@ -1,0 +1,57 @@
+Batch : 18 (SL DP)
+Group : 4
+Title : Insurance policy management
+
+Database tables:
+
+CREATE TABLE admin_table(
+	aid varchar(255) NOT NULL,
+	password varchar(255) DEFAULT NULL,
+	username varchar(255) DEFAULT NULL,
+	PRIMARY KEY(aid)
+);
+
+CREATE TABLE user(
+	username varchar(255) NOT NULL,
+	password varchar(255) DEFAULT NULL,
+	email varchar(255) DEFAULT NULL,
+	mobile bigint DEFAULT NULL,
+	user_id varchar(255) NOT NULL,
+	PRIMARY KEY(username)
+);
+
+CREATE TABLE feedback(
+	feed_id int NOT NULL,
+	email varchar(255) DEFAULT NULL,
+	mobile bigint DEFAULT NULL,
+	msg varchar(255) DEFAULT NULL,
+	user_name varchar(255) DEFAULT NULL,
+	PRIMARY KEY(feed_id)
+);
+
+CREATE TABLE approval(
+	username varchar(255) NOT NULL,
+	date datetime(10) DEFAULT NULL,
+	policy_id int DEFAULT NULL,
+	request_id int DEFAULT NULL,
+	status varchar(255) DEFAULT NULL,
+	PRIMARY KEY(username)
+);
+
+CREATE TABLE qna(
+	user_name varchar(255) NOT NULL,
+	answer varchar(255) DEFAULT NULL,
+	q_id int DEFAULT NULL,
+	question varchar(255) DEFAULT NULL,
+	PRIMARY KEY(user_name)
+);
+
+CREATE TABLE policies(
+	policy_id int NOT NULL,
+	amount double DEFAULT NULL,
+	category varchar(255) DEFAULT NULL,
+	policy_name varchar(255) DEFAULT NULL,
+	years int DEFAULT NULL,
+	PRIMARY KEY(policy_id)
+);
+

@@ -1,0 +1,35 @@
+<app-adminh></app-adminh>
+<body>
+    <div class="form-bg">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-offset-4 col-md-4 col-sm-offset-3 col-sm-6">
+                  <div class="form-container">
+                      <form class="form-horizontal" #adminForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
+                          <h3 class="title">Add Policy</h3>
+                          <div class="form-group">
+                            <input type="number" id="fid" name="policy_id" placeholder="Policy Id" [(ngModel)]="addP.policy_id">
+                          </div>
+                          <div class="form-group">
+                            <input type="text" id="fname"  name="policyName" placeholder="Policy name" [(ngModel)]="addP.policyName">
+                          </div>
+                          <div class="form-group">
+                            <input type="text" id="Email" name="category" placeholder="Policy type" [(ngModel)]="addP.category">
+                          </div>
+                          <div class="form-group">
+                            <input type="text" id="fromdate" name="amount" placeholder="Policy coverage amount" [(ngModel)]="addP.amount">
+                          </div>
+                          <div class="form-group">
+                            <input type="number" id="todate" name="tenure" placeholder="Policy coverage period (in years)" [(ngModel)]="addP.tenureInYears">
+                          </div>
+                          <div class="form-group">
+                              <button class="btn signup" type="submit">Add policy</button>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+</body>

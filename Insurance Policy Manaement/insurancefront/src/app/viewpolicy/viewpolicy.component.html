@@ -1,0 +1,49 @@
+<app-adminh></app-adminh>
+
+<h1 class="heading">List of Policies</h1>
+
+<table id="customers">
+ <thead>
+  <tr>
+    <th>Id</th>
+    <th>Policy Name</th>
+    <th>Policy Category</th>
+    <th>Policy Coverage Amount</th>
+    <th>Policy Coverage (in years)</th>
+    <th colspan="2">Actions</th>
+  </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let obj of pol">
+         <td>{{obj.policyId}}</td>
+         <td>{{obj.policyName}}</td>
+         <td>{{obj.category}}</td>
+         <td>{{obj.amount}}</td>
+         <td>{{obj.tenureInYears}}</td>
+         <td><button class="btn btn-warning" (click)="updatePolicy(obj)" type="submit">Update</button></td>
+         <td><button class="btn btn-danger" (click)="deletePolicy(obj)" type="submit">Delete</button></td>
+    </tr>
+
+</tbody>
+</table>
+
+<div id="exampleModal">
+  <div class="container">
+      <div *ngIf="flag">
+          <h2>Update Policy details</h2>
+          <form (ngSubmit)="updatePolicyAll()">
+              <label>Policy ID</label><br>
+              <input type="number" name="policy_id" [(ngModel)]="policy_id" readonly /><br><br>
+              <label>Policy Name</label><br>
+              <input type="text" name="policyName" [(ngModel)]="policyName" /><br><br>
+              <label>Amount</label><br>
+              <input type="text" name="amount" [(ngModel)]="amount" /><br><br>
+              <label>Policy Coverage (in years)</label><br>
+              <input type="number" name="tenureInYears" [(ngModel)]="tenureInYears" /><br><br>
+              <label>Policy Category</label><br>
+              <input type="text" name="category" [(ngModel)]="category" /><br><br>
+              <button style="margin:5px;" type="submit" class="btn btn-primary bn">Update Policy</button>
+              <button style="margin:5px;" type="reset" class="btn btn-primary  bn">Reset</button>
+          </form>
+      </div>
+  </div>

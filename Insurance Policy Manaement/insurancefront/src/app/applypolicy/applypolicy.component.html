@@ -1,0 +1,27 @@
+<app-userh></app-userh>
+
+<h1 class="heading">Policies List</h1>
+
+<table id="customers">
+ <thead>
+  <tr>
+    <th>Id</th>
+    <th>Policy Name</th>
+    <th>Category</th>
+    <th>Amount</th>
+    <th>Tenure</th>
+    <th></th>
+  </tr>
+</thead>
+<tbody>
+     <tr *ngFor="let obj of pol">
+         <td>{{obj.policyId}}</td>
+         <td>{{obj.policyName}}</td>
+         <td>{{obj.category}}</td>
+         <td>{{obj.amount}}</td>
+         <td>{{obj.tenureInYears}}</td>
+         <td><button class="btn" (click)="show(obj.policyId)" type="submit">Apply</button></td>
+    </tr>
+
+</tbody>
+</table>

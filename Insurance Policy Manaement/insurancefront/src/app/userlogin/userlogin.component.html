@@ -1,0 +1,36 @@
+<app-header></app-header>
+
+<div class="bgimage" style="width: 100%; height: 695px;">
+
+  <div class="user">
+      <h1 style="color: black; padding-top: 35px;">User Login</h1><br>
+      <h3 style="color: black;">Please Login to proceed</h3><br><br>
+
+      <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+          <div class="login-div">
+          <table class="loginform">
+
+              <tr>
+                  <td><label for="username">Username: &nbsp;</label></td>
+                  <td><input type="email" required #name="ngModel" [class.is-invalid]="name.invalid && name.touched" id="username" name="userName" class="form-control"
+                       placeholder="Enter Username" [(ngModel)]="loginModel.userName">
+                  </td>
+              </tr><br>
+              <tr>
+                  <td><label for="password">Password: &nbsp;</label></td>
+                  <td><input type="password" id="password" name="password" required #password="ngModel" [class.is-invalid]="password.invalid && password.touched" class="form-control"
+                      placeholder="Enter Password" [(ngModel)]="loginModel.password">
+              </td>
+              </tr>
+              <tr>
+                  <td colspan="2"><br>
+                  <input type="submit" [disabled]="f.form.invalid" value="Login" class="actionBtn"></td>
+              </tr>
+              </table>
+          </div>
+      </form>
+      <br>
+      <h3 class="newuser">New User? <a routerLink="/register" routerLinkActive="active">Sign Up</a></h3>
+  </div>
+
+</div>

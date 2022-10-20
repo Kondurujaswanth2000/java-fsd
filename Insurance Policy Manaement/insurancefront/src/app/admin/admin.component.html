@@ -1,0 +1,38 @@
+<app-header></app-header>
+<router-outlet></router-outlet>
+
+<div class="bgimage" style="width: 100%; height: 695px;">
+
+<div class="adminLogin">
+  <div class = "img">
+  <img class="img" src="https://paisaexpo.com/pub/media/magefan_blog/Fire-Property-Insurance-Coverage-Gets-Extension.jpg" alt="">
+  </div>
+    <h1 style="color: black; padding-top: 35px;">Admin Login</h1><br>
+    <h3 style="color: black;">Please Login to proceed further!!</h3><br><br>
+   <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+
+        <div class="login-div" text-align="center">
+        <table class="loginform" text-align="center">
+            <tr>
+                <td><label for="username">Email Address: &nbsp;</label></td>
+                <td><input type="username" id="username" name="username" class="form-control is-invalid" required #name="ngModel"
+                    class="searchTextField" placeholder="Enter Username" [(ngModel)]="adminModel.username">
+                </td>
+            </tr><br>
+            <tr>
+                <td><label for="password">Password: </label></td>
+                <td><input type="password" id="password" name="password" required #password="ngModel" [class.is-invalid]="password.invalid && password.touched" class="form-control"
+                    class="searchTextField" placeholder="Enter Password" [(ngModel)]="adminModel.password">
+            </td>
+            </tr>
+            <tr>
+                <td colspan="2" text-align="center"><br>
+                <input style="background-color: rgb(6, 178, 240);" type="submit" value="Login" class="actionBtn"></td>
+            </tr>
+            </table>
+        </div>
+    </form>
+    <br>
+</div>
+
+</div>
